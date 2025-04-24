@@ -1,33 +1,42 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playwrite+DE+VA+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playwrite+DE+VA+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap");
 
-
-@theme{
-	--color-light-coffee: #C89F94;
+@theme {
+	--color-coffee-50: #faf6f5;
+	--color-coffee-100: #f5edeb;
+	--color-coffee-200: #e8d8d3;
+	--color-coffee-300: #dec6bf;
+	--color-coffee-400: #d4b4ab;
+	--color-coffee-500: #c89f94;
+	--color-coffee-600: #b17767;
+	--color-coffee-700: #8a5647;
+	--color-coffee-800: #5b382f;
+	--color-coffee-900: #2f1d18;
+	--color-coffee-950: #180f0c;
 	--font-Karla: "Karla", "sans-serif";
 	--animate-scale-down: scale-down 0.3s ease-in-out;
 	@keyframes scale-down {
-		0%{
+		0% {
 			transform: translateY(-100%);
 		}
-		100%{
+		100% {
 			transform: translateY(0);
 		}
 	}
 }
 
 /* ct = custom */
-.ct-topmenu-expanded{
-	@apply absolute top-10 z-50 w-full text-center bg-white animate-scale-down; 
+.ct-topmenu-expanded {
+	@apply absolute top-10 z-50 w-full text-center bg-white animate-scale-down;
 }
 
-.ct-top-menu-item{
+.ct-top-menu-item {
 	@apply cursor-pointer py-1 hover:text-gray-800 relative after:lg:absolute 
 	after:lg:bottom-0 after:lg:left-0 after:lg:h-0.5 after:lg:w-0 
-	hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300 after:lg:bg-light-coffee;
+	hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300 after:lg:bg-coffee-300;
 }
 
-.ct-top-menu-item-active{
+.ct-top-menu-item-active {
 	@apply text-gray-800 after:lg:w-full;
 }
 
@@ -36,4 +45,15 @@
 }
 .ct-badge-circle {
 	@apply text-xs flex justify-center items-center rounded-full;
+}
+.ct-subheadline{
+	@apply flex justify-center items-center mb-24
+}
+
+.ct-subheadline-lable{
+	@apply mx-4 font-semibold text-xs text-center uppercase text-gray-400 tracking-widest
+}
+
+.ct-subheadline-decorline{
+	@apply w-12 h-px bg-gray-300
 }
