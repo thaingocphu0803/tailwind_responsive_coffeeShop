@@ -4,6 +4,7 @@
     "tailwindcss": "^4.1.4"
   },
   "scripts": {
-    "build:css" : "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch"
+    "build:css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "start:live": "live-server --port=3000 --open=./src/index.html"
   }
 }
