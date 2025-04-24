@@ -14,12 +14,24 @@
 	--color-coffee-900: #2f1d18;
 	--color-coffee-950: #180f0c;
 	--font-Karla: "Karla", "sans-serif";
-	--animate-scale-down: scale-down 0.3s ease-in-out;
+	--animate-scale-down: scale-down 0.5s ease-in-out;
 	@keyframes scale-down {
 		0% {
 			transform: translateY(-100%);
 		}
 		100% {
+			transform: translateY(0);
+		}
+	}
+
+	--animate-fadeIn: fadeIn 0.5s ease-in-out;
+	@keyframes fadeIn {
+		from {
+			opacity:0;
+			transform: translateY(10%);
+		}
+		to {
+			opacity:1;
 			transform: translateY(0);
 		}
 	}
@@ -56,4 +68,12 @@
 
 .ct-subheadline-decorline{
 	@apply w-12 h-px bg-gray-300
+}
+
+.ct-product-card {
+	@apply border-coffee-200 border-0
+}
+
+.ct-explore-lable{
+	@apply uppercase bg-white text-gray-900 w-max tracking-wide py-4 px-6 font-semibold text-sm cursor-pointer hover:bg-white/90
 }
