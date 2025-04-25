@@ -1,6 +1,7 @@
 const topMenu = document.getElementById('ct-top-menu');
 const toggleTopMenuIcon = document.getElementById('ct-toggle-top-menu-icon');
 const topMenuItem = document.querySelectorAll('.ct-top-menu-item');
+const subcribeBtn = document.getElementById('subcribe');
 
 document.addEventListener('click', function(e){
 	if(toggleTopMenuIcon.contains(e.target)){
@@ -21,6 +22,14 @@ document.addEventListener('click', function(e){
 			localStorage.setItem('activeLink', item.dataset.id);
 		}
 	});
+
+	if(subcribeBtn.contains(e.target)){
+		e.target.firstChild.textContent = "please wait...";
+
+		setTimeout(() => {
+			
+		}, 5000);
+	}
 })
 
 document.addEventListener('DOMContentLoaded', ()=>{
