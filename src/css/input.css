@@ -59,21 +59,47 @@
 	@apply text-xs flex justify-center items-center rounded-full;
 }
 .ct-subheadline{
-	@apply flex justify-center items-center mb-24
+	@apply flex justify-center items-center my-20;
 }
 
 .ct-subheadline-lable{
-	@apply mx-4 font-semibold text-xs text-center uppercase text-gray-400 tracking-widest
+	@apply mx-4 font-semibold text-xs text-center uppercase text-gray-400 tracking-widest;
 }
 
 .ct-subheadline-decorline{
-	@apply w-12 h-px bg-gray-300
+	@apply w-12 h-px bg-gray-300;
 }
 
 .ct-product-card {
-	@apply border-coffee-200 border-0
+	@apply border-coffee-200 border-0;
 }
 
 .ct-explore-lable{
-	@apply uppercase bg-white text-gray-900 w-max tracking-wide py-4 px-6 font-semibold text-sm cursor-pointer hover:bg-white/90
+	@apply uppercase bg-white text-gray-900 w-max tracking-wide py-4 px-6 font-semibold text-sm cursor-pointer hover:bg-white/90;
+}
+
+#root {
+	@apply h-screen overflow-x-hidden overflow-y-auto perspective-[2px];
+}	
+
+.ct-parallax{
+	@apply h-[40vh] flex flex-col items-center justify-center relative;
+}
+
+.ct-static{
+	@apply h-auto z-[999] bg-white flex flex-col items-center justify-center relative;
+}
+
+.ct-parallax-image {
+	@apply w-full h-full absolute -z-10 bg-cover bg-center bg-fixed;
+}
+
+@media screen(xl){
+	.ct-parallax{
+		@apply h-[70vh] flex flex-col items-center justify-center relative transform-3d;
+	}
+
+	.ct-parallax-image {
+	@apply -translate-z-[1px] scale-150;
+}
 }
